@@ -1,9 +1,15 @@
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.Stack;
 import java.util.Vector;
 import java.util.Set;
+import java.util.Queue;
+import java.util.Deque;
+import java.util.PriorityQueue;
+
+
 
 public class test {
     public static void main(String[] args) {
@@ -61,6 +67,35 @@ public class test {
 
         System.out.println(set);
 
+        Queue<Integer> queue = new LinkedList<Integer>();
 
+        queue.add(12);
+        queue.offer(8);
+        queue.offer(18);//we use offer in queue
+        queue.add(10);
+
+        System.out.println("queue = "+queue);
+        System.out.println("removed queue = " + queue.remove());
+        System.out.println("queue = " + queue);
+        System.out.println("queue" + queue.poll());
+
+
+        Deque<Integer> deq = new ArrayDeque<Integer>();
+        deq.offer(17);
+        deq.offer(1);
+        deq.offerLast(11);
+        deq.offerFirst(46);
+
+        System.out.println("Deque" + deq);
+        System.out.println(deq.peek());
+
+        PriorityQueue<Integer> PQ = new PriorityQueue<>();
+
+        PQ.add(45);
+        PQ.offer(10);
+        PQ.offer(20);
+        PQ.add(6);
+
+        System.out.println(PQ);
     }
 }
